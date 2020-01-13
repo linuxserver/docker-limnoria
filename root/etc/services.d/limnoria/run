@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bash
+
+CONF_COUNT=$(find /config -maxdepth 1 -name '*.conf' | wc -l)
+
+if [ "${CONF_COUNT}" -eq 1 ]; then
+  CONF_FILE=$(find /config -maxdepth 1 -name '*.conf')
+  exec \
+    s6-setuidgid abc supybot \
+    "${CONF_FILE}"
+elif [ "${CONF_COUNT}" -gt 1 ]; then
+  echo "Multiple configuration files (*.conf) for Limnoria found. Remove the extra configurations and try again."
+  sleep infinity
+else
+  echo "No config found. Please terminal into the container and run the wizard."
+  echo "Example: \"docker exec -it -w /config -u abc limnoria supybot-wizard\""
+  echo "Then restart the container."
+  sleep infinity
+fi
