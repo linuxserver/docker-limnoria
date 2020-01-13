@@ -137,11 +137,25 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-The container will start without a config on first run. You will need to run the following wizard command:
+If you do not have an existing config you will need to start the container and then run the following wizard command:
 
-`docker exec -it -w /config -u abc limnoria supybot-wizard`
+`docker exec -it -w /config -u abc limnoria limnoria-wizard`
 
-Then restart the container and the bot will run normally.
+If you have an existing config, adjust the directory settings in your conf file as follows:
+
+```conf
+supybot.directories.backup: /config/backup
+supybot.directories.conf: /config/conf
+supybot.directories.data: /config/data
+supybot.directories.data.tmp: /config/data/tmp
+supybot.directories.data.web: /config/web
+supybot.directories.log: /config/logs
+supybot.directories.plugins: /config/plugins
+```
+
+NOTE: These are not grouped together in the file. You will need to search your conf file for the variables.
+
+Then start up the container and place your conf file and any of your existing directories in /config
 
 
 
@@ -209,4 +223,4 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **26.11.19:** - Initial Release.
+* **13.01.20:** - Initial Release.

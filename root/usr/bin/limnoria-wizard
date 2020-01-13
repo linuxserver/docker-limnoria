@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+supybot-wizard
+
+[ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -eq 1 ] && touch /config/configdone
