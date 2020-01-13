@@ -18,7 +18,6 @@ RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     gnupg \
-    py3-pip \
     python3 && \
   echo "**** install app ****" && \
   if [ -z ${LIMNORIA_VERSION+x} ]; then \
@@ -26,11 +25,11 @@ RUN \
   else \
     LIMNORIA="limnoria==${LIMNORIA_VERSION}"; \
   fi && \
-  pip3 install -U \
+  pip3 install -U --no-cache-dir \
     pip && \
-  pip3 install -U -r \
+  pip3 install -U --no-cache-dir -r \
     https://raw.githubusercontent.com/ProgVal/Limnoria/master/requirements.txt && \
-  pip3 install -U \
+  pip3 install -U --no-cache-dir \
     ${LIMNORIA} && \
   echo "**** cleanup ****" && \
   apk del --purge \

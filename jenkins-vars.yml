@@ -2,7 +2,7 @@
 
 # jenkins variables
 project_name: docker-limnoria
-external_type: custom_json
+external_type: pip_version
 release_type: stable
 release_tag: latest
 ls_branch: master

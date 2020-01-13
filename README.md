@@ -137,7 +137,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 &nbsp;
 ## Application Setup
 
-The container will start without a config and will log the following instructions
+The container will start without a config on first run. You will need to run the following wizard command:
 
 `docker exec -it -w /config -u abc limnoria supybot-wizard`
 
