@@ -1,0 +1,85 @@
+---
+
+# project information
+project_name: limnoria
+project_url: "https://github.com/ProgVal/limnoria"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png"
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot."
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+project_blurb_optional_extras_enabled: false
+project_blurb_optional_extras: []
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# development version
+development_versions: false
+development_versions_items:
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+
+param_usage_include_net: false
+
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
+
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "<path to config>", desc: "Where Limnoria config is stored." }
+
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "8080", internal_port: "8080", port_desc: "Port for Limnoria's web interface." }
+
+# optional container parameters
+opt_param_usage_include_env: false
+opt_param_env_vars:
+
+opt_param_usage_include_vols: false
+opt_param_volumes:
+
+opt_param_usage_include_ports: false
+opt_param_ports:
+
+opt_param_device_map: false
+opt_param_devices:
+
+opt_cap_add_param: false
+opt_cap_add_param_vars:
+
+optional_block_1: false
+optional_block_1_items: ""
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  If you do not have an existing config you will need to start the container and then run the following wizard command:
+
+  `docker exec -it -w /config -u abc limnoria limnoria-wizard`
+
+  If you have an existing config, adjust the directory settings in your conf file as follows:
+
+  ```conf
+  supybot.directories.backup: /config/backup
+  supybot.directories.conf: /config/conf
+  supybot.directories.data: /config/data
+  supybot.directories.data.tmp: /config/data/tmp
+  supybot.directories.data.web: /config/web
+  supybot.directories.log: /config/logs
+  supybot.directories.plugins: /config/plugins
+  ```
+
+  NOTE: These are not grouped together in the file. You will need to search your conf file for the variables.
+
+  Then start up the container and place your conf file and any of your existing directories in /config
+
+# changelog
+changelogs:
+  - { date: "13.01.20:", desc: "Initial Release." }
