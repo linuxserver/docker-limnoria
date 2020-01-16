@@ -38,7 +38,7 @@ Find us at:
 
 [Limnoria](https://github.com/ProgVal/limnoria) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot.
 
-[![limnoria]()](https://github.com/ProgVal/limnoria)
+[![limnoria](https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png)](https://github.com/ProgVal/limnoria)
 
 ## Supported Architectures
 
