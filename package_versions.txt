@@ -9,7 +9,7 @@ coreutils-8.31-r0
 db-5.3.28-r1
 expat-2.2.9-r1
 gdbm-1.13-r1
-glib-2.62.5-r0
+glib-2.62.6-r0
 gmp-6.1.2-r1
 gnupg-2.2.19-r0
 gnutls-3.6.10-r0
