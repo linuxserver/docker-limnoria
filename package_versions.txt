@@ -12,7 +12,7 @@ gdbm-1.13-r1
 glib-2.62.6-r0
 gmp-6.1.2-r1
 gnupg-2.2.19-r0
-gnutls-3.6.10-r0
+gnutls-3.6.10-r1
 libacl-2.2.53-r0
 libassuan-2.5.3-r0
 libattr-2.4.48-r0
