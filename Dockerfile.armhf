@@ -28,7 +28,7 @@ RUN \
   fi && \
   pip3 install -U --no-cache-dir \
     pip && \
-  pip3 install -U --no-cache-dir -r \
+  CRYPTOGRAPHY_DONT_BUILD_RUST=true pip3 install -U --no-cache-dir -r \
     https://raw.githubusercontent.com/ProgVal/Limnoria/master/requirements.txt && \
   pip3 install -U --no-cache-dir \
     ${LIMNORIA} && \
