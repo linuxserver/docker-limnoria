@@ -10,6 +10,7 @@ LABEL maintainer="nemchik"
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
+    cargo \
     g++ \
     gcc \
     libffi-dev \
