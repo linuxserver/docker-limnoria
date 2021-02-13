@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.12
+FROM ghcr.io/linuxserver/baseimage-alpine:3.13
 
 # set version label
 ARG BUILD_DATE
@@ -10,6 +10,7 @@ LABEL maintainer="nemchik"
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
+    cargo \
     g++ \
     gcc \
     libffi-dev \
@@ -34,7 +35,11 @@ RUN \
     ${LIMNORIA} && \
   echo "**** cleanup ****" && \
   apk del --purge \
-    build-dependencies
+    build-dependencies && \
+  rm -rf \
+    /tmp/* \
+    /root/.cache \
+    /root/.cargo
 
 # copy local files
 COPY root/ /

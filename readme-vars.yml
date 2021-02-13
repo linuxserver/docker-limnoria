@@ -32,7 +32,7 @@ param_env_vars:
 
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "<path to config>", desc: "Where Limnoria config is stored." }
+  - { vol_path: "/config", vol_host_path: "path/to/config", desc: "Where Limnoria config is stored." }
 
 param_usage_include_ports: true
 param_ports:
@@ -82,5 +82,6 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "13.02.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
   - { date: "13.01.20:", desc: "Initial Release." }
