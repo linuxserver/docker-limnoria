@@ -35,7 +35,11 @@ RUN \
     ${LIMNORIA} && \
   echo "**** cleanup ****" && \
   apk del --purge \
-    build-dependencies
+    build-dependencies && \
+  rm -rf \
+    /tmp/* \
+    /root/.cache \
+    /root/.cargo
 
 # copy local files
 COPY root/ /
