@@ -1,6 +1,6 @@
 alpine-baselayout-3.2.0-r8
 alpine-keys-2.2-r0
-apk-tools-2.12.4-r2
+apk-tools-2.12.5-r0
 bash-5.1.0-r0
 busybox-1.32.1-r5
 ca-certificates-20191127-r5
@@ -39,7 +39,7 @@ musl-1.2.2-r0
 musl-utils-1.2.2-r0
 ncurses-libs-6.2_p20210109-r0
 ncurses-terminfo-base-6.2_p20210109-r0
-nettle-3.7-r0
+nettle-3.7.2-r0
 npth-1.6-r0
 p11-kit-0.23.22-r0
 pcre-8.44-r0
