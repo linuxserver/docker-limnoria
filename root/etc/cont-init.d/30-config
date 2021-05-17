@@ -2,13 +2,13 @@
 
 # create folders
 mkdir -p \
-  /config/backup \
-  /config/conf \
-  /config/data \
-  /config/data/tmp \
-  /config/web \
-  /config/logs \
-  /config/plugins
+    /config/backup \
+    /config/conf \
+    /config/data \
+    /config/data/tmp \
+    /config/web \
+    /config/logs \
+    /config/plugins
 
 # set permissions
 chown -R abc:abc /config

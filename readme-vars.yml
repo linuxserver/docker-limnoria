@@ -82,6 +82,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "17.05.21:", desc: "Add linuxserver wheel index." }
   - { date: "13.02.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
   - { date: "13.01.20:", desc: "Initial Release." }
