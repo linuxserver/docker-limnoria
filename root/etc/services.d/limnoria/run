@@ -1,23 +1,23 @@
 #!/usr/bin/with-contenv bash
 
 if [ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -gt 1 ]; then
-  echo "Multiple Limnoria configuration (*.conf) files found. Only one at a time may be used. Remove the extra configurations."
-  while : ; do
-    [ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -eq 1 ] && break
-    sleep 1
-  done
+    echo "Multiple Limnoria configuration (*.conf) files found. Only one at a time may be used. Remove the extra configurations."
+    while : ; do
+        [ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -eq 1 ] && break
+        sleep 1
+    done
 fi
 
 if [ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -lt 1 ]; then
-  echo "No config found. Please terminal into the container and run the wizard."
-  echo "Example: \"docker exec -it -w /config -u abc limnoria limnoria-wizard\""
-  while : ; do
-    [[ -f "/config/configdone" ]] && break
-    sleep 1
-  done
+    echo "No config found. Please terminal into the container and run the wizard."
+    echo "Example: \"docker exec -it -w /config -u abc limnoria limnoria-wizard\""
+    while : ; do
+        [[ -f "/config/configdone" ]] && break
+        sleep 1
+    done
 fi
 
 CONF_FILE=$(find /config -maxdepth 1 -name '*.conf')
 exec \
-  s6-setuidgid abc supybot \
-  "${CONF_FILE}"
+    s6-setuidgid abc supybot \
+    "${CONF_FILE}"

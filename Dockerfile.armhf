@@ -29,9 +29,9 @@ RUN \
   fi && \
   pip3 install -U --no-cache-dir \
     pip && \
-  CRYPTOGRAPHY_DONT_BUILD_RUST=true pip3 install -U --no-cache-dir -r \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ -r \
     https://raw.githubusercontent.com/ProgVal/Limnoria/master/requirements.txt && \
-  pip3 install -U --no-cache-dir \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ \
     ${LIMNORIA} && \
   echo "**** cleanup ****" && \
   apk del --purge \
