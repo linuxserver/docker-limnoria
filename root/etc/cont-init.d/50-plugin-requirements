@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+while IFS= read -r line; do
+    pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ -r \
+        "${line}"
+done < <(find /config/plugins -maxdepth 2 -name 'requirements.txt')
