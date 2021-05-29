@@ -59,9 +59,13 @@ The architectures supported by this image are:
 
 ## Application Setup
 
+### New Configuration
+
 If you do not have an existing config you will need to start the container and then run the following wizard command:
 
 `docker exec -it -w /config -u abc limnoria limnoria-wizard`
+
+### Existing Configuration
 
 If you have an existing config, adjust the directory settings in your conf file as follows:
 
@@ -77,7 +81,15 @@ supybot.directories.plugins: /config/plugins
 
 NOTE: These are not grouped together in the file. You will need to search your conf file for the variables.
 
-Then start up the container and place your conf file and any of your existing directories in /config
+Then place your conf file and any of your existing directories in /config and start up the container.
+
+### Plugin Requirements
+
+The container will pip install any requirements.txt it finds in the /config/plugins folder on startup.
+
+If you install a plugin using the PluginDownloader that includes a requirements.txt you can 
+execute a shell into the container and then use `pip install /config/plugins/ThePlugin/requirements.txt`
+or restart the container and the requirements will be installed.
 
 ## Usage
 
@@ -240,6 +252,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.05.21:** - Install plugin requirements on container init.
 * **17.05.21:** - Add linuxserver wheel index.
 * **13.02.21:** - Rebasing to alpine 3.13.
 * **01.06.20:** - Rebasing to alpine 3.12.
