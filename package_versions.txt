@@ -6,7 +6,7 @@ busybox-1.32.1-r7
 ca-certificates-20211220-r0
 ca-certificates-bundle-20211220-r0
 coreutils-8.32-r2
-expat-2.2.10-r2
+expat-2.2.10-r4
 gdbm-1.19-r0
 glib-2.66.8-r0
 gmp-6.2.1-r0
@@ -15,7 +15,7 @@ gnutls-3.7.1-r0
 libacl-2.2.53-r0
 libassuan-2.5.4-r0
 libattr-2.4.48-r0
-libblkid-2.37.3-r0
+libblkid-2.37.4-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcap-2.46-r0
@@ -26,7 +26,7 @@ libgpg-error-1.41-r0
 libintl-0.20.2-r2
 libksba-1.5.0-r0
 libldap-2.4.57-r1
-libmount-2.37.3-r0
+libmount-2.37.4-r0
 libproc-3.3.16-r0
 libsasl-2.1.27-r10
 libsecret-0.20.4-r0
