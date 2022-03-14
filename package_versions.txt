@@ -9,7 +9,7 @@ coreutils-8.32-r2
 expat-2.2.10-r6
 gdbm-1.19-r0
 glib-2.66.8-r0
-gmp-6.2.1-r0
+gmp-6.2.1-r1
 gnupg-2.2.31-r0
 gnutls-3.7.1-r0
 libacl-2.2.53-r0
