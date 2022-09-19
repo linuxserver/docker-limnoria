@@ -94,6 +94,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "19.09.22:", desc: "Rebase to alpine 3.15." }
   - { date: "25.05.21:", desc: "Install plugin requirements on container init." }
   - { date: "17.05.21:", desc: "Add linuxserver wheel index." }
   - { date: "13.02.21:", desc: "Rebasing to alpine 3.13." }

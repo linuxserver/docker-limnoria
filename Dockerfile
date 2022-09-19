@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.13
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 # set version label
 ARG BUILD_DATE
@@ -28,10 +28,10 @@ RUN \
     LIMNORIA="limnoria==${LIMNORIA_VERSION}"; \
   fi && \
   pip3 install -U --no-cache-dir \
-    pip && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ -r \
+    pip setuptools wheel && \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.15/ -r \
     https://raw.githubusercontent.com/ProgVal/Limnoria/master/requirements.txt && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.15/ \
     ${LIMNORIA} && \
   echo "**** cleanup ****" && \
   apk del --purge \

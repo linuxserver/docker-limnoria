@@ -251,6 +251,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **19.09.22:** - Rebase to alpine 3.15.
 * **25.05.21:** - Install plugin requirements on container init.
 * **17.05.21:** - Add linuxserver wheel index.
 * **13.02.21:** - Rebasing to alpine 3.13.
