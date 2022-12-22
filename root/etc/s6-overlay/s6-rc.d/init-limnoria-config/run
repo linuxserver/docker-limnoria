@@ -1,8 +1,9 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 # create folders
 mkdir -p \
     /config/{backup,conf,data,data/tmp,web,logs,plugins}
 
 # set permissions
-chown -R abc:abc /config
+lsiown -R abc:abc /config
