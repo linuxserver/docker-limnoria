@@ -13,4 +13,10 @@ if [[ -n "${PLUGIN_REQUIREMENTS}" ]]; then
         pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r \
             "${line}"
     done <<<"${PLUGIN_REQUIREMENTS}"
+    apk del --purge \
+        build-dependencies
+    rm -rf \
+        /tmp/* \
+        "${HOME}"/.cache \
+        "${HOME}"/.cargo
 fi
