@@ -10,15 +10,17 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="nemchik"
 
 RUN \
-  echo "**** install runtime packages ****" && \
-  apk add --no-cache \
+  echo "**** install build packages ****" && \
+  apk add --no-cache --virtual=build-dependencies \
     build-base \
     cargo \
-    gnupg \
     libffi-dev \
     openssl-dev \
-    python3 \
     python3-dev && \
+  echo "**** install runtime packages ****" && \
+  apk add --no-cache \
+    gnupg \
+    python3 && \
   echo "**** install app ****" && \
   if [ -z ${LIMNORIA_VERSION+x} ]; then \
     LIMNORIA_VERSION=$(curl -sL  https://pypi.python.org/pypi/limnoria/json |jq -r '. | .info.version'); \
@@ -32,6 +34,8 @@ RUN \
   pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ \
     limnoria=="${LIMNORIA_VERSION}" && \
   echo "**** cleanup ****" && \
+  apk del --purge \
+    build-dependencies && \
   rm -rf \
     /tmp/* \
     $HOME/.cache \
