@@ -1,5 +1,8 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 
 supybot-wizard
 
-[ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -eq 1 ] && touch /config/configdone
+if [ "$(find /config -maxdepth 1 -name '*.conf' | wc -l)" -eq 1 ]; then
+    touch /config/configdone
+fi
