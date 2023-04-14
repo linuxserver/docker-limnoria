@@ -15,7 +15,7 @@ ca-certificates-bundle  20220614-r4            apk
 cffi                    1.15.1                 python  
 chardet                 5.1.0                  python  
 coreutils               9.1-r0                 apk     
-cryptography            40.0.1                 python  
+cryptography            40.0.2                 python  
 curl                    7.88.1-r1              apk     
 feedparser              6.0.10                 python  
 gdbm                    1.23-r0                apk     
