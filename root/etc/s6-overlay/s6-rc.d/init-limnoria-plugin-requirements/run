@@ -10,8 +10,8 @@ if [[ -n "${PLUGIN_REQUIREMENTS}" ]]; then
         openssl-dev \
         python3-dev
     while IFS= read -r line; do
-        pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r \
-            "${line}"
+        pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.18/ \
+            -r "${line}"
     done <<<"${PLUGIN_REQUIREMENTS}"
     apk del --purge \
         build-dependencies
