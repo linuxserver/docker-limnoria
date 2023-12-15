@@ -19,7 +19,7 @@ cryptography              41.0.7                  python
 curl                      8.5.0-r0                apk     
 dateandtime               0.0.7                   python  
 ddate                     0.1.2                   python  
-feedparser                6.0.10                  python  
+feedparser                6.0.11                  python  
 gdbm                      1.23-r1                 apk     
 gmp                       6.2.1-r3                apk     
 gnupg                     2.4.3-r0                apk     
@@ -79,7 +79,7 @@ procps-ng                 4.0.4-r0                apk
 pyc                       0.1-r0                  apk     
 pycparser                 2.21                    python  
 python-dateutil           2.8.2                   python  
-python-gnupg              0.5.1                   python  
+python-gnupg              0.5.2                   python  
 python3                   3.11.6-r0               apk     
 python3-pyc               3.11.6-r0               apk     
 python3-pycache-pyc0      3.11.6-r0               apk     
