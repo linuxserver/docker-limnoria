@@ -31,7 +31,7 @@ param_env_vars:
 
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "path/to/config", desc: "Where Limnoria config is stored." }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
 
 param_usage_include_ports: true
 param_ports:
@@ -93,6 +93,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
   - { date: "22.12.22:", desc: "Rebase to alpine 3.17." }
   - { date: "19.09.22:", desc: "Rebase to alpine 3.15." }
