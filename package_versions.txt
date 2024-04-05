@@ -10,7 +10,7 @@ bash                    5.2.21-r0              apk
 brotli-libs             1.1.0-r1               apk                      
 busybox                 1.36.1-r15             apk                      
 busybox-binsh           1.36.1-r15             apk                      
-c-ares                  1.24.0-r1              apk                      
+c-ares                  1.27.0-r0              apk                      
 ca-certificates         20240226-r0            apk                      
 ca-certificates-bundle  20240226-r0            apk                      
 cffi                    1.16.0                 python                   
@@ -81,7 +81,7 @@ pinentry                1.2.1-r1               apk
 pip                     24.0                   python                   
 procps-ng               4.0.4-r0               apk                      
 pyc                     3.11.8-r0              apk                      
-pycparser               2.21                   python                   
+pycparser               2.22                   python                   
 python-dateutil         2.9.0.post0            python                   
 python-gnupg            0.5.2                  python                   
 python3                 3.11.8-r0              apk                      
