@@ -67,7 +67,7 @@ libssl3                 3.1.5-r0               apk
 libstdc++               13.2.1_git20231014-r0  apk                      
 libtasn1                4.19.0-r2              apk                      
 libunistring            1.1-r2                 apk                      
-limnoria                2024.4.26              python                   
+limnoria                2024.5.30              python                   
 linux-pam               1.5.3-r7               apk                      
 mpdecimal               2.5.1-r2               apk                      
 musl                    1.2.4_git20230717-r4   apk                      
