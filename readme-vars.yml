@@ -7,27 +7,15 @@ project_logo: "https://raw.githubusercontent.com/linuxserver/docker-limnoria/mas
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
-project_blurb_optional_extras_enabled: false
-project_blurb_optional_extras: []
 
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
   - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 
-# development version
-development_versions: false
-development_versions_items:
-
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
-
-param_usage_include_net: false
-
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 
 param_usage_include_vols: true
 param_volumes:
@@ -37,36 +25,17 @@ param_usage_include_ports: true
 param_ports:
   - { external_port: "8080", internal_port: "8080", port_desc: "Port for Limnoria's web interface." }
 
-# optional container parameters
-opt_param_usage_include_env: false
-opt_param_env_vars:
-
-opt_param_usage_include_vols: false
-opt_param_volumes:
-
-opt_param_usage_include_ports: false
-opt_param_ports:
-
-opt_param_device_map: false
-opt_param_devices:
-
-opt_cap_add_param: false
-opt_cap_add_param_vars:
-
-optional_block_1: false
-optional_block_1_items: ""
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
   ### New Configuration
-  
+
   If you do not have an existing config you will need to start the container and then run the following wizard command:
 
   `docker exec -it -w /config -u abc limnoria limnoria-wizard`
 
   ### Existing Configuration
-  
+
   If you have an existing config, adjust the directory settings in your conf file as follows:
 
   ```conf
@@ -84,15 +53,16 @@ app_setup_block: |
   Then place your conf file and any of your existing directories in /config and start up the container.
 
   ### Plugin Requirements
-  
+
   The container will pip install any requirements.txt it finds in the /config/plugins folder on startup.
-  
-  If you install a plugin using the PluginDownloader that includes a requirements.txt you can 
+
+  If you install a plugin using the PluginDownloader that includes a requirements.txt you can
   execute a shell into the container and then use `pip install /config/plugins/ThePlugin/requirements.txt`
-  or restart the container and the requirements will be installed. 
+  or restart the container and the requirements will be installed.
 
 # changelog
 changelogs:
+  - { date: "27.06.24:", desc: "Rebase to Alpine 3.20."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
   - { date: "22.12.22:", desc: "Rebase to alpine 3.17." }
