@@ -87,7 +87,7 @@ Then place your conf file and any of your existing directories in /config and st
 
 The container will pip install any requirements.txt it finds in the /config/plugins folder on startup.
 
-If you install a plugin using the PluginDownloader that includes a requirements.txt you can 
+If you install a plugin using the PluginDownloader that includes a requirements.txt you can
 execute a shell into the container and then use `pip install /config/plugins/ThePlugin/requirements.txt`
 or restart the container and the requirements will be installed.
 
@@ -301,6 +301,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **27.06.24:** - Rebase to Alpine 3.20.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **25.05.23:** - Rebase to Alpine 3.18, deprecate armhf.
 * **22.12.22:** - Rebase to alpine 3.17.
