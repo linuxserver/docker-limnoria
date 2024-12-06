@@ -91,10 +91,12 @@ If you install a plugin using the PluginDownloader that includes a requirements.
 execute a shell into the container and then use `pip install /config/plugins/ThePlugin/requirements.txt`
 or restart the container and the requirements will be installed.
 
- 
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
+
+>[!NOTE]
+>Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
@@ -135,7 +137,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 8080` | Port for Limnoria's web interface. |
+| `-p 8080:8080` | Port for Limnoria's web interface. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
