@@ -6,6 +6,7 @@ project_url: "https://github.com/ProgVal/limnoria"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "IRC"
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
