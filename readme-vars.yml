@@ -3,7 +3,7 @@
 # project information
 project_name: limnoria
 project_url: "https://github.com/ProgVal/limnoria"
-project_logo: "https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/limnoria-icon.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_categories: "IRC"
@@ -20,6 +20,8 @@ param_volumes:
 param_usage_include_ports: true
 param_ports:
   - {external_port: "8080", internal_port: "8080", port_desc: "Port for Limnoria's web interface."}
+readonly_supported: false
+nonroot_supported: false
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -100,6 +102,7 @@ init_diagram: |
   "limnoria:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "01.02.25:", desc: "Rebase to Alpine 3.21."}
   - {date: "27.06.24:", desc: "Rebase to Alpine 3.20."}
   - {date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - {date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf."}
