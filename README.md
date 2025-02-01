@@ -41,7 +41,7 @@ Find us at:
 
 [Limnoria](https://github.com/ProgVal/limnoria) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot.
 
-[![limnoria](https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png)](https://github.com/ProgVal/limnoria)
+[![limnoria](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/limnoria-icon.png)](https://github.com/ProgVal/limnoria)
 
 ## Supported Architectures
 
@@ -305,6 +305,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.02.25:** - Rebase to Alpine 3.21.
 * **27.06.24:** - Rebase to Alpine 3.20.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **25.05.23:** - Rebase to Alpine 3.18, deprecate armhf.
