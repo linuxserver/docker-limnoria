@@ -26,7 +26,7 @@ coreutils               9.5-r2            apk
 coreutils-env           9.5-r2            apk                      
 coreutils-fmt           9.5-r2            apk                      
 coreutils-sha512sum     9.5-r2            apk                      
-cryptography            45.0.7            python                   
+cryptography            46.0.1            python                   
 curl                    8.12.1-r1         apk                      
 dateandtime             0.0.7             python                   
 ddate                   0.1.2             python                   
@@ -117,7 +117,7 @@ sgmllib3k               1.0.0             python
 shadow                  4.16.0-r1         apk                      
 six                     1.17.0            python                   
 skalibs-libs            2.14.3.0-r0       apk                      
-sqlite-libs             3.48.0-r3         apk                      
+sqlite-libs             3.48.0-r4         apk                      
 ssl_client              1.37.0-r13        apk                      
 tomli                   2.0.1             python                   
 typeguard               4.3.0             python                   
