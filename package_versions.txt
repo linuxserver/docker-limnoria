@@ -80,7 +80,7 @@ libpsl                  0.21.5-r3         apk
 libsasl                 2.1.28-r8         apk                      
 libssl3                 3.3.5-r0          apk                      
 libstdc++               14.2.0-r4         apk                      
-libtasn1                4.20.0-r0         apk                      
+libtasn1                4.21.0-r0         apk                      
 libunistring            1.2-r0            apk                      
 limnoria                2025.11.2         python                   
 linux-pam               1.6.1-r1          apk                      
