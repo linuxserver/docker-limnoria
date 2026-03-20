@@ -17,7 +17,7 @@ ca-certificates         20250911-r0       apk
 ca-certificates-bundle  20250911-r0       apk                      
 catatonit               0.2.0-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.1.0             python                   
+chardet                 7.2.0             python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -61,7 +61,7 @@ libbsd                  0.12.2-r0         apk
 libbz2                  1.0.8-r6          apk                      
 libcrypto3              3.3.6-r0          apk                      
 libcurl                 8.14.1-r2         apk                      
-libexpat                2.7.4-r0          apk                      
+libexpat                2.7.5-r0          apk                      
 libffi                  3.4.7-r0          apk                      
 libgcc                  14.2.0-r4         apk                      
 libgcrypt               1.10.3-r1         apk                      
