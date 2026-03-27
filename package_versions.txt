@@ -17,7 +17,7 @@ ca-certificates         20250911-r0       apk
 ca-certificates-bundle  20250911-r0       apk                      
 catatonit               0.2.0-r0          apk                      
 cffi                    2.0.0             python                   
-chardet                 7.3.0             python                   
+chardet                 7.4.0.post1       python                   
 cli                     UNKNOWN           binary                   
 cli-32                  UNKNOWN           binary                   
 cli-64                  UNKNOWN           binary                   
@@ -26,7 +26,7 @@ coreutils               9.5-r2            apk
 coreutils-env           9.5-r2            apk                      
 coreutils-fmt           9.5-r2            apk                      
 coreutils-sha512sum     9.5-r2            apk                      
-cryptography            46.0.5            python                   
+cryptography            46.0.6            python                   
 curl                    8.14.1-r2         apk                      
 dateandtime             0.0.7             python                   
 ddate                   0.1.2             python                   
