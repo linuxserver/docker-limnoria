@@ -26,7 +26,7 @@ coreutils               9.5-r2            apk
 coreutils-env           9.5-r2            apk                      
 coreutils-fmt           9.5-r2            apk                      
 coreutils-sha512sum     9.5-r2            apk                      
-cryptography            46.0.7            python                   
+cryptography            47.0.0            python                   
 curl                    8.14.1-r2         apk                      
 dateandtime             0.0.7             python                   
 ddate                   0.1.2             python                   
@@ -94,9 +94,9 @@ npth                    1.6-r4            apk
 oniguruma               6.9.9-r0          apk                      
 p11-kit                 0.25.5-r2         apk                      
 packaging               26.0              python                   
-packaging               26.1              python                   
+packaging               26.2              python                   
 pinentry                1.3.1-r0          apk                      
-pip                     26.0.1            python                   
+pip                     26.1              python                   
 platformdirs            4.4.0             python                   
 procps-ng               4.0.4-r2          apk                      
 pyc                     3.12.13-r0        apk                      
@@ -122,7 +122,7 @@ tzdata                  2026a-r0          apk
 utmps-libs              0.1.2.3-r2        apk                      
 wheel                   0.46.3            python                   
 wheel                   0.47.0            python                   
-xz-libs                 5.6.3-r1          apk                      
+xz-libs                 5.8.3-r0          apk                      
 zipp                    3.23.0            python                   
 zlib                    1.3.2-r0          apk                      
 zstd-libs               1.5.6-r2          apk                      
