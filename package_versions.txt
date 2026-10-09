@@ -101,7 +101,7 @@ pip                     26.2.1            python
 platformdirs            4.4.0             python                   
 procps-ng               4.0.4-r2          apk                      
 pyc                     3.12.15-r0        apk                      
-pycparser               3.0               python                   
+pycparser               3.11              python                   
 pysocks                 1.7.1             python                   
 python-dateutil         2.9.0.post0       python                   
 python-gnupg            0.5.7             python                   
